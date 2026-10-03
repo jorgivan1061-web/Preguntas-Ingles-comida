@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthy Eating Habits Survey</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-animation"></div>
+    <main class="container">
+        <header>
+            <h1>Food Habits Survey</h1>
+            <p>We'd love to know more about your daily eating habits!</p>
+        </header>
+
+        <form id="surveyForm">
+            <div class="form-group">
+                <label class="question" for="name">What is your name?</label>
+                <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+            </div>
+
+            <div class="form-group">
+                <p class="question">How often do you eat fruits and vegetables?</p>
+                <div class="options">
+                    <label><input type="radio" name="fruits_veg" value="Every day" required> Every day</label>
+                    <label><input type="radio" name="fruits_veg" value="A few times a week"> A few times a week</label>
+                    <label><input type="radio" name="fruits_veg" value="Rarely"> Rarely</label>
+                    <label><input type="radio" name="fruits_veg" value="Never"> Never</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <p class="question">What healthy food do you eat most often?</p>
+                <div class="options">
+                    <label><input type="radio" name="healthy_food" value="Fruits" required> Fruits</label>
+                    <label><input type="radio" name="healthy_food" value="Vegetables"> Vegetables</label>
+                    <label><input type="radio" name="healthy_food" value="Fish"> Fish</label>
+                    <label><input type="radio" name="healthy_food" value="Eggs"> Eggs</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <p class="question">What is your favorite meal of the day?</p>
+                <div class="options">
+                    <label><input type="radio" name="favorite_meal" value="Breakfast" required> Breakfast</label>
+                    <label><input type="radio" name="favorite_meal" value="Lunch"> Lunch</label>
+                    <label><input type="radio" name="favorite_meal" value="Dinner"> Dinner</label>
+                    <label><input type="radio" name="favorite_meal" value="Snacks"> Snacks</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <p class="question">How often do you eat fast food?</p>
+                <div class="options">
+                    <label><input type="radio" name="fast_food" value="Every day" required> Every day</label>
+                    <label><input type="radio" name="fast_food" value="A few times a week"> A few times a week</label>
+                    <label><input type="radio" name="fast_food" value="Once a week"> Once a week</label>
+                    <label><input type="radio" name="fast_food" value="Rarely"> Rarely</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <p class="question">What food do you usually eat when you are hungry between meals?</p>
+                <div class="options">
+                    <label><input type="radio" name="snacks" value="Fruit" required> Fruit</label>
+                    <label><input type="radio" name="snacks" value="Cookies"> Cookies</label>
+                    <label><input type="radio" name="snacks" value="Chips"> Chips</label>
+                    <label><input type="radio" name="snacks" value="Sandwiches"> Sandwiches</label>
+                </div>
+            </div>
+
+            <button type="submit" class="submit-btn">Submit Survey</button>
+        </form>
+
+        <div id="successMessage" class="hidden">
+            <h2>Thank you, <span id="userNameDisplay"></span>!</h2>
+            <p>Your responses have been successfully recorded.</p>
+            <button id="resetBtn" class="submit-btn outline">Take Again</button>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
