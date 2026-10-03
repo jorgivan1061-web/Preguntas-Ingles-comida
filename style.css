@@ -1,13 +1,13 @@
 :root {
-    --primary-color: #6366f1;
-    --primary-hover: #4f46e5;
-    --bg-gradient-start: #e0e7ff;
-    --bg-gradient-end: #c7d2fe;
+    --primary-color: #22c55e;
+    --primary-hover: #16a34a;
+    --bg-gradient-start: #fef9c3;
+    --bg-gradient-end: #dcfce7;
     --card-bg: rgba(255, 255, 255, 0.9);
     --text-main: #1f2937;
     --text-muted: #6b7280;
     --border-color: #e5e7eb;
-    --border-focus: #818cf8;
+    --border-focus: #86efac;
 }
 
 * {
@@ -29,20 +29,42 @@ body {
     overflow-x: hidden;
 }
 
-.background-animation {
+.food-background {
     position: fixed;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle, rgba(255,255,255,0.8) 0%, transparent 60%);
-    animation: rotate 30s linear infinite;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
     z-index: -1;
+    overflow: hidden;
+    pointer-events: none;
 }
 
-@keyframes rotate {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+.floating-food {
+    position: absolute;
+    font-size: 2.5rem;
+    animation: floatUp 12s linear infinite;
+    opacity: 0;
+    bottom: -10%;
+    left: calc(var(--i) * 10%);
+    animation-delay: calc(var(--i) * 0.8s);
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+    }
+    10% {
+        opacity: 0.6;
+    }
+    90% {
+        opacity: 0.6;
+    }
+    100% {
+        transform: translateY(-120vh) rotate(360deg);
+        opacity: 0;
+    }
 }
 
 .container {
